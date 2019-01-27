@@ -1,0 +1,28 @@
+{
+  "name": "boilerplate",
+  "version": 2,
+  "builds": [
+    { "src": "package.json", "use": "@now/next" },
+    { "src": "api/**/*.js", "use": "@now/node" }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1",
+      "headers": {
+        "x-request-path": "$1"
+      }
+    },
+    {
+      "src": "/redirect-test",
+      "status": 302,
+      "headers": {
+        "location": "https://google.com"
+      }
+    }
+  ]
+}
