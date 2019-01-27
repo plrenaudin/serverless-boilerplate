@@ -1,4 +1,3 @@
-import React from "react";
 import "isomorphic-unfetch";
 
 const Clock = ({ now }) => (
