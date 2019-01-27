@@ -2,13 +2,12 @@ import Clock from "../components/clock";
 
 const Index = ({ now }) => (
   <h1>
-    Hello <Clock {...{ now }} />
+    Hello you! <Clock {...{ now }} />
   </h1>
 );
 
 Index.getInitialProps = async ({ req }) => {
-  console.log("getting time...");
-  const url = `https://${req.headers.host}/api/time`;
+  const url = `http://${req.headers.host}/api/time`;
   let now;
   try {
     const res = await fetch(url);
@@ -18,7 +17,7 @@ Index.getInitialProps = async ({ req }) => {
       console.log(`res not ok from ${url}`);
     }
   } catch (err) {
-    console.error(`Could not fetch time from ${url}`);
+    console.error(`Could not fetch time from ${url}`, err.message);
   }
   return { now };
 };

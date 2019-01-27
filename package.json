@@ -4,7 +4,7 @@
   "description": "Serverless Nextjs + lambda boilerplate on Now.sh platform",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
+    "dev": "nodemon server.js",
     "build": "next build",
     "start": "next start"
   },
@@ -12,9 +12,16 @@
   "author": "Pierre-Louis Renaudin",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.16.4",
     "isomorphic-unfetch": "^3.0.0",
     "next": "^7.0.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  },
+  "nodemonConfig": {
+    "timeout": 1000
   }
 }
