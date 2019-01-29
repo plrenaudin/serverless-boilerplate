@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="clock"
+>
+  The current time,
+  <time>
+    2019-01-29T01:42:18.665Z
+  </time>
+</div>
+`;

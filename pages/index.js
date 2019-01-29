@@ -12,7 +12,7 @@ Index.getInitialProps = async ({ req }) => {
   try {
     const res = await fetch(url);
     if (res.ok) {
-      now = (await res.text()).trim();
+      now = (await res.json()).now;
     } else {
       console.log(`res not ok from ${url}`);
     }
