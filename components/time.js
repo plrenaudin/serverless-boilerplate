@@ -1,10 +1,10 @@
 import "isomorphic-unfetch";
 
-const Clock = ({ now }) => (
+const Time = ({ now }) => (
   <div className="clock">
     The current time,
     <time>{now}</time>
   </div>
 );
 
-export default Clock;
+export default Time;

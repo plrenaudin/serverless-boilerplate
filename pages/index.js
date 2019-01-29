@@ -1,8 +1,8 @@
-import Clock from "../components/clock";
+import Time from "../components/time";
 
 const Index = ({ now }) => (
   <h1>
-    Hello you! <Clock {...{ now }} />
+    Hello you! <Time {...{ now }} />
   </h1>
 );
 
