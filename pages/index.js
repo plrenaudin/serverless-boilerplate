@@ -1,13 +1,17 @@
-import Time from "../components/time";
+import Time from "../components/Time";
+import Layout from "../components/Layout";
 
 const Index = ({ now }) => (
-  <h1>
-    Hello you! <Time {...{ now }} />
-  </h1>
+  <Layout>
+    <h1>
+      Hello you! <Time {...{ now }} />
+    </h1>
+  </Layout>
 );
 
 Index.getInitialProps = async ({ req }) => {
-  const url = `http://${req.headers.host}/api/time`;
+  const host = req ? req.headers.host : window.location.host;
+  const url = `http://${host}/api/time`;
   let now;
   try {
     const res = await fetch(url);

@@ -1,4 +1,4 @@
-import Time from "./time";
+import Time from ".";
 import renderer from "react-test-renderer";
 
 it("renders correctly", () => {

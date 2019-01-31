@@ -1,4 +1,4 @@
-import "isomorphic-unfetch";
+import "./index.less";
 
 const Time = ({ now }) => (
   <div className="clock">
