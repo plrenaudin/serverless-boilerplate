@@ -1,12 +1,9 @@
 import Time from "../components/Time";
-import Layout from "../components/Layout";
 
 const Index = ({ now }) => (
-  <Layout>
-    <h1>
-      Hello you! <Time {...{ now }} />
-    </h1>
-  </Layout>
+  <h1>
+    Hello you! <Time {...{ now }} />
+  </h1>
 );
 
 Index.getInitialProps = async ({ req }) => {
