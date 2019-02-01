@@ -8,9 +8,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint --fix .",
-    "test": "npm run lint && npm run test:components && npm run test:lambdas",
+    "test": "npm run lint && npm run test:components && npm run test:lambdas && npm run test:modules",
     "test:components": "jest components",
     "test:lambdas": "jest --testEnvironment=node api",
+    "test:modules": "jest --testEnvironment=node modules",
     "updatesSnapshots": "npm run test:components -- -u"
   },
   "keywords": [],
@@ -21,7 +22,7 @@
     "express": "4.16.4",
     "isomorphic-unfetch": "3.0.0",
     "less": "3.9.0",
-    "next": "7.0.2",
+    "next": "^8.0.0-canary.17",
     "react": "16.7.0",
     "react-dom": "16.7.0"
   },

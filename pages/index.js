@@ -1,4 +1,5 @@
 import Time from "../components/Time";
+import { getBaseUrl } from "../modules/baseurl";
 
 const Index = ({ now }) => (
   <h1>
@@ -7,8 +8,7 @@ const Index = ({ now }) => (
 );
 
 Index.getInitialProps = async ({ req }) => {
-  const host = req ? req.headers.host : window.location.host;
-  const url = `http://${host}/api/time`;
+  const url = `${getBaseUrl(req)}/api/time`;
   let now;
   try {
     const res = await fetch(url);
