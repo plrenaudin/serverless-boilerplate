@@ -4,7 +4,7 @@
   "description": "Serverless Nextjs + lambda boilerplate on Now.sh platform",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon devServer.js",
+    "dev": "NODE_ENV=development nodemon devServer.js",
     "build": "next build",
     "start": "next start",
     "lint": "eslint --fix .",

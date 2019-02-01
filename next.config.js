@@ -8,6 +8,7 @@ const { PHASE_PRODUCTION_SERVER } = process.env.NODE_ENV === "development" ? {} 
 
 module.exports = (phase, { defaultConfig }) => {
   if (phase === PHASE_PRODUCTION_SERVER) {
+    // Production config
     return nextConfig;
   }
   const withLess = require("@zeit/next-less");
