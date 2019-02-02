@@ -67,5 +67,38 @@
       "<rootDir>/.next/",
       "<rootDir>/node_modules/"
     ]
-  }
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "prettier"
+    ],
+    "parser": "babel-eslint",
+    "env": {
+      "browser": true,
+      "jest": true,
+      "es6": true
+    },
+    "plugins": [
+      "babel",
+      "react",
+      "prettier"
+    ],
+    "rules": {
+      "no-console": "off",
+      "prettier/prettier": "error",
+      "react/jsx-uses-vars": 2,
+      "func-style": [
+        "error",
+        "declaration",
+        {
+          "allowArrowFunctions": true
+        }
+      ]
+    }
+  },
+  "eslintIgnore": [
+    ".next",
+    "node_modules"
+  ]
 }
