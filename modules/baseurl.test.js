@@ -1,4 +1,4 @@
-import { getBaseUrl } from "./baseurl";
+import getBaseUrl from "./baseurl";
 
 it("gets the base url correctly when req is undefined", () => {
   expect(getBaseUrl()).toEqual("");

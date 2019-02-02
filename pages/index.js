@@ -1,5 +1,5 @@
 import Time from "../components/Time";
-import { getBaseUrl } from "../modules/baseurl";
+import fetcher from "../modules/fetcher";
 
 const Index = ({ now }) => (
   <h1>
@@ -8,18 +8,8 @@ const Index = ({ now }) => (
 );
 
 Index.getInitialProps = async ({ req }) => {
-  const url = `${getBaseUrl(req)}/api/time`;
-  let now;
-  try {
-    const res = await fetch(url);
-    if (res.ok) {
-      now = (await res.json()).now;
-    } else {
-      console.log(`res not ok from ${url}`);
-    }
-  } catch (err) {
-    console.error(`Could not fetch time from ${url}`, err.message);
-  }
+  let { now } = await fetcher({ req, url: "/api/time" });
+
   return { now };
 };
 
