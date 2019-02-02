@@ -5,9 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "NODE_ENV=development nodemon devServer.js",
-    "build": "next build",
-    "start": "next start",
     "lint": "eslint --fix .",
+    "now-build": "next build",
     "test": "npm run lint && npm run test:components && npm run test:lambdas && npm run test:modules",
     "test:components": "jest components",
     "test:lambdas": "jest --testEnvironment=node api",
@@ -100,5 +99,10 @@
   "eslintIgnore": [
     ".next",
     "node_modules"
-  ]
+  ],
+  "babel": {
+    "presets": [
+      "next/babel"
+    ]
+  }
 }
