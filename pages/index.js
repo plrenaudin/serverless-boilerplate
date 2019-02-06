@@ -8,7 +8,7 @@ const Index = ({ now }) => (
 );
 
 Index.getInitialProps = async ({ req }) => {
-  let { now } = await fetcher({ req, url: "/api/time" });
+  let { now } = (await fetcher({ req, url: "/api/time" })) || {};
 
   return { now };
 };

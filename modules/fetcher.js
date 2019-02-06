@@ -11,24 +11,24 @@ import logger from "./logger";
  * @returns {Promise}
  */
 const fetcher = ({ req, url }) => {
+  const startTime = Date.now();
   return fetch(getBaseUrl(req) + url)
-    .then(log)
+    .then(log(startTime))
     .then(checkStatus)
     .then(r => r.json())
     .catch(err => {
-      console.error(err);
+      logger.error(err);
     });
 };
 
 /**
- * Log fetcher's response
+ * Log fetcher's response status and latency
  * @param {Response} response fetcher's response
  *
  * @returns {Response}
  */
-const log = response => {
-  const { url, status } = response;
-  logger.info(`Called ${url} - ${status}`);
+const log = startTime => response => {
+  logger.info(`Called ${response.url} - ${response.status} - ${Date.now() - startTime} ms`);
   return response;
 };
 
