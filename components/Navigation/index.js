@@ -2,7 +2,7 @@ import "isomorphic-unfetch";
 import Link from "next/link";
 import "./index.less";
 
-export default ({ children }) => (
+const Navigation = () => (
   <>
     <nav>
       <Link href="/">
@@ -12,6 +12,7 @@ export default ({ children }) => (
         <a>About</a>
       </Link>
     </nav>
-    <main>{children}</main>
   </>
 );
+
+export default Navigation;

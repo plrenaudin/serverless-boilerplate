@@ -1,13 +1,7 @@
-import Layout from ".";
+import Navigation from ".";
 import renderer from "react-test-renderer";
 
 it("renders correctly", () => {
-  const tree = renderer
-    .create(
-      <Layout>
-        <div>Children content</div>
-      </Layout>
-    )
-    .toJSON();
+  const tree = renderer.create(<Navigation />).toJSON();
   expect(tree).toMatchSnapshot();
 });
