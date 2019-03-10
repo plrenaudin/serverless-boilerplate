@@ -2,7 +2,6 @@
 const withLess = require("@zeit/next-less");
 
 const nextConfig = {
-  cssModules: true,
   target: "serverless"
 };
 
