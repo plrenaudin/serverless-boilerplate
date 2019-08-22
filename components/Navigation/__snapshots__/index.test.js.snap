@@ -5,12 +5,14 @@ exports[`renders correctly 1`] = `
   <a
     href="/"
     onClick={[Function]}
+    onMouseEnter={[Function]}
   >
     Home
   </a>
   <a
     href="/about"
     onClick={[Function]}
+    onMouseEnter={[Function]}
   >
     About
   </a>
