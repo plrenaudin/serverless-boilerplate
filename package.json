@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "NODE_ENV=development nodemon devServer.js",
     "lint": "eslint --fix .",
-    "now-build": "next build",
+    "build": "next build",
     "test": "npm run lint && npm run test:components && npm run test:lambdas && npm run test:modules",
     "test:components": "jest components",
     "test:lambdas": "jest --testEnvironment=node api",
