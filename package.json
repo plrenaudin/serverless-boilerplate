@@ -4,9 +4,10 @@
   "description": "Serverless Nextjs + lambda boilerplate on Now.sh platform",
   "main": "index.js",
   "scripts": {
-    "dev": "NODE_ENV=development nodemon devServer.js",
-    "lint": "eslint --fix .",
     "build": "next build",
+    "dev": "next",
+    "lint": "eslint --fix .",
+    "start": "next start",
     "test": "npm run lint && npm run test:components && npm run test:lambdas && npm run test:modules",
     "test:components": "jest components",
     "test:lambdas": "jest --testEnvironment=node api",
