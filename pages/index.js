@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
-import Time from "../components/Time";
-import fetcher from "../modules/fetcher";
+import Time from "components/Time";
+import fetcher from "modules/fetcher";
 
 const Index = ({ now }) => (
   <h1>
