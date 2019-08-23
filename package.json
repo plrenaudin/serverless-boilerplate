@@ -10,7 +10,7 @@
     "start": "next start",
     "test": "npm run lint && npm run test:components && npm run test:lambdas && npm run test:modules",
     "test:components": "jest components",
-    "test:lambdas": "jest --testEnvironment=node api",
+    "test:lambdas": "jest --testEnvironment=node pages/api",
     "test:modules": "jest --testEnvironment=node modules",
     "updatesSnapshots": "npm run test:components -- -u"
   },
