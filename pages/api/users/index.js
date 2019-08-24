@@ -6,7 +6,6 @@ import { findAll, create } from "models/users";
  * @param {import("next").NextApiResponse} res
  */
 const Controller = async (req, res) => {
-  // GET /users
   let response;
   switch (req.method) {
     case "GET":

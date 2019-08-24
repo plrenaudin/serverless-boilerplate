@@ -19,6 +19,7 @@
   "license": "ISC",
   "dependencies": {
     "@zeit/next-less": "1.0.1",
+    "dotenv": "8.0.0",
     "express": "4.16.4",
     "isomorphic-unfetch": "3.0.0",
     "less": "3.10.2",
@@ -38,13 +39,9 @@
     "husky": "1.3.1",
     "jest": "24.9.0",
     "lint-staged": "9.2.3",
-    "nodemon": "1.19.1",
     "prettier": "1.18.2",
     "prettier-eslint": "9.0.0",
     "react-test-renderer": "16.9.0"
-  },
-  "nodemonConfig": {
-    "timeout": 1000
   },
   "lint-staged": {
     "*.{js,jsx,json,less,md}": [
@@ -82,7 +79,8 @@
     "env": {
       "browser": true,
       "jest": true,
-      "es6": true
+      "es6": true,
+      "node": true
     },
     "plugins": [
       "babel",

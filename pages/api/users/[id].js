@@ -1,12 +1,11 @@
 import { findById, edit, deleteOne } from "models/users";
 
 /**
- * Users controller
+ * Users/:id controller
  * @param {import("next").NextApiRequest} req
  * @param {import("next").NextApiResponse} res
  */
 const Controller = async (req, res) => {
-  // GET /users
   let response;
   switch (req.method) {
     case "GET":
