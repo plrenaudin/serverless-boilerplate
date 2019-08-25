@@ -1,5 +1,5 @@
 import model from "./model";
-import db from "models/db";
+import db from "../db";
 
 const findAll = async () => {
   await db();

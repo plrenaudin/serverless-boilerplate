@@ -59,10 +59,7 @@
   },
   "jest": {
     "moduleNameMapper": {
-      "^.+\\.(css|less|scss)$": "babel-jest",
-      "^components/(.*)$": "<rootDir>/components/$1",
-      "^modules/(.*)$": "<rootDir>/modules/$1",
-      "^models/(.*)$": "<rootDir>/models/$1"
+      "^.+\\.(css|less|scss)$": "babel-jest"
     },
     "testPathIgnorePatterns": [
       "<rootDir>/.next/",

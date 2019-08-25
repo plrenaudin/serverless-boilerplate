@@ -5,14 +5,15 @@ import logger from "./logger";
  * Fetch or post data to API endpoint
  *
  * @param {Object} options Fetcher's options
- * @param {string} options.req The request
+ * @param {string} options.headers The request's headers
  * @param {string} options.url The url
+ * @param {string} options.config The config to pass to the underlying fetch implementation (isomorphic-unfetch)
  *
  * @returns {Promise}
  */
-const fetcher = ({ req, url }) => {
+const fetcher = (url, config, headers) => {
     const startTime = Date.now();
-    return fetch(getBaseUrl(req) + url)
+    return fetch(getBaseUrl(headers) + url, config)
       .then(log(startTime))
       .then(checkStatus)
       .then(r => r.json())

@@ -1,4 +1,4 @@
-import { findAll, create } from "models/users";
+import { findAll, create } from "../../../models/users";
 
 /**
  * Users controller

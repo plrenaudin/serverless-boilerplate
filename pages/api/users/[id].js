@@ -1,4 +1,4 @@
-import { findById, edit, deleteOne } from "models/users";
+import { findById, edit, deleteOne } from "../../../models/users";
 
 /**
  * Users/:id controller
