@@ -5,7 +5,6 @@
 This project is meant to provide a small template for serverless projects which includes:
 
 - **Next.js** Framework
-- **Express** server to run the lambdas locally
 - **.less** file support
 - **Jest** unit tests
 - Code formatting on commit with **Prettier** and **Husky**
@@ -14,8 +13,7 @@ This project is meant to provide a small template for serverless projects which 
 
 ## Targets
 
-`npm run dev` Starts **Next.js** with an **Express** server serving our lambdas
-
+`npm run dev` Starts **Next.js**
 `npm run test` Lints and run **Jest** unit tests
 
 ## Deployments

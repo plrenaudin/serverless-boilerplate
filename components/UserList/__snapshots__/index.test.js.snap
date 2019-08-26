@@ -1,38 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<ul>
-  <li>
-    Mickey
-     
-    15
-    <button
-      onClick={[Function]}
-    >
-      Delete
-    </button>
-  </li>
-  <li>
-    Dan
-     
-    25
-    <button
-      onClick={[Function]}
-    >
-      Delete
-    </button>
-  </li>
-  <li>
-    John
-     
-    42
-    <button
-      onClick={[Function]}
-    >
-      Delete
-    </button>
-  </li>
-</ul>
+<section
+  className="userList"
+>
+  <ul>
+    <li>
+      Mickey
+       
+      15
+      <button
+        onClick={[Function]}
+      >
+        Delete
+      </button>
+    </li>
+    <li>
+      Dan
+       
+      25
+      <button
+        onClick={[Function]}
+      >
+        Delete
+      </button>
+    </li>
+    <li>
+      John
+       
+      42
+      <button
+        onClick={[Function]}
+      >
+        Delete
+      </button>
+    </li>
+  </ul>
+</section>
 `;
 
-exports[`renders correctly without data 1`] = `null`;
+exports[`renders correctly without data 1`] = `
+<section
+  className="userList"
+/>
+`;

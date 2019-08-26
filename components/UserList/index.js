@@ -13,7 +13,7 @@ const deleteUser = id => () => {
 };
 
 const UserList = ({ users }) => (
-  <>
+  <section className="userList">
     {users.length > 0 && (
       <ul>
         {users.map(i => (
@@ -24,7 +24,7 @@ const UserList = ({ users }) => (
         ))}
       </ul>
     )}
-  </>
+  </section>
 );
 
 UserList.propTypes = {

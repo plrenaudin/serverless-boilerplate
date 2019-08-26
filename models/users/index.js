@@ -1,5 +1,21 @@
-import model from "./model";
+import mongoose from "mongoose";
 import db from "../db";
+
+const model =
+  mongoose.models.User ||
+  mongoose.model(
+    "User",
+    mongoose.Schema({
+      name: {
+        type: String,
+        required: true
+      },
+      age: {
+        type: Number,
+        required: true
+      }
+    })
+  );
 
 const findAll = async () => {
   await db();
