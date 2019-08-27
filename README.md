@@ -53,7 +53,7 @@ Or use their Github integration.
 
 ```
 |
-+- /components // React components
++- /components // React components + tests
 |
 +- /models // Mongoose Schema and DAOs
 |
@@ -70,3 +70,8 @@ Or use their Github integration.
 |             `- [id].js // source code for the /api/myFunction/:id endpoint
 
 ```
+
+## Configuration files
+
+- `next.config.js` needed for nextjs to enable .less support and `.env` variable injection
+- `now.json` needed for now platform if you use [environment variables](https://zeit.co/docs/v2/serverless-functions/env-and-secrets/)
