@@ -1,21 +1,30 @@
 import PropTypes from "prop-types";
-import Time from "components/Time";
-import fetcher from "modules/fetcher";
+import fetcher from "../modules/fetcher";
+import logger from "../modules/logger";
+import UserList from "../components/UserList";
+import UserForm from "../components/UserForm";
 
-const Index = ({ now }) => (
-  <h1>
-    Hello you! <Time {...{ now }} />
-  </h1>
+const Index = ({ users = [] }) => (
+  <>
+    <h1>User list</h1>
+    <UserList users={users} />
+    <UserForm />
+  </>
 );
 
 Index.propTypes = {
-  now: PropTypes.number.isRequired
+  users: PropTypes.array.isRequired
 };
 
 Index.getInitialProps = async ({ req }) => {
-  const { now } = (await fetcher({ req, url: "/api/time" })) || { now: null };
+  let users = [];
+  try {
+    users = await fetcher("/api/users", {}, req ? req.headers : null);
+  } catch (error) {
+    logger.error("Couldn't fetch user list", error);
+  }
 
-  return { now };
+  return { users };
 };
 
 export default Index;

@@ -5,9 +5,9 @@ it("gets the base url correctly when req is undefined", () => {
 });
 
 it("gets the base url correctly when req has no protocol", () => {
-  expect(getBaseUrl({ headers: { host: "myHost" } })).toEqual("http://myHost");
+  expect(getBaseUrl({ host: "myHost" })).toEqual("http://myHost");
 });
 
 it("gets the base url correctly when req has protocol", () => {
-  expect(getBaseUrl({ headers: { host: "myHost", "x-forwarded-proto": "https" } })).toEqual("https://myHost");
+  expect(getBaseUrl({ host: "myHost", "x-forwarded-proto": "https" })).toEqual("https://myHost");
 });
