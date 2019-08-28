@@ -33,12 +33,15 @@ const create = async ({ name, age }) => {
 };
 
 const edit = async (_id, { name, age }) => {
+  if (!_id) return;
   await db();
   return model.update({ _id }, { name, age });
 };
+
 const deleteOne = async _id => {
+  if (!_id) return;
   await db();
   return model.deleteOne({ _id });
 };
 
-export { findAll, findById, create, edit, deleteOne };
+export { model, findAll, findById, create, edit, deleteOne };
