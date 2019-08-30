@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "regions": ["dub1"],
   "env": {
     "MONGO_URL": "@mongo_url"
   }
